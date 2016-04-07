@@ -13,14 +13,31 @@
 			<span>convert image files & metadata</span>
 		</header>
 		<main>
-			<form action="/file-upload" class="dropzone dz-clickable">
+			<form action="#" name="myDropzone" class="dropzone dz-clickable">
 			  <div class="fallback">
 			    <input name="file" type="file" accept="image/*" />
 			  </div>
 			</form>
-			<div class="previews">
-<!-- Previews kommer her -->
+			<div id="overlay">
 			</div>
+				<div class="previews">
+				<!-- Previews kommer her -->
+				</div>
+			<hr />
+			<form action="fileupload.php" method="post" class="temp-form">
+			    <table>
+				    <tr>
+				   		<td>
+				   			<input name="file" type="file" accept="image/*" />
+				   		</td>
+				    </tr>
+				    <tr>
+				    	<td>
+				    		<button type="submit">Upload</button>
+				    	</td>
+				    </tr>
+			    </table>
+			</form>
 		</main>
 	</div>
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script><!-- require jQuery -->
@@ -32,6 +49,12 @@
       // Handle the responseText here. For example, add the text to the preview element:
       file.previewTemplate.appendChild(document.createTextNode(responseText));
     });
+    this.on("addedfile", function(file) { 
+      // Dropped file
+      $("#overlay").fadeIn(300);
+      $(".previews").delay(200).fadeIn(300);
+      console.log("hmm???");
+     });
   }
 }; </script>
 </body>
