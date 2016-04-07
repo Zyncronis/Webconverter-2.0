@@ -40,8 +40,16 @@ main{
 .dz-message span{
 	/* Text inside Dropzone */
 	font-weight:bold;
-	font-size:32px;
+	font-size:24px;
 	color:#999;
+	text-shadow:0px 0px 50px #ddd;
+	text-shadow:0px 1px 1px #fff;
 }
 
 /* Animations */
+@keyframes animateBorder {
+  to {
+    outline-color: #EA3556;
+    box-shadow: 0 0 0 6px yellow;
+  }
+}
