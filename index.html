@@ -33,7 +33,10 @@
 				    </tr>
 				    <tr>
 				    	<td>
-				    		<button type="submit">Upload</button>
+				    		<button type="submit">upload</button>
+				    	</td>
+				    	<td>
+				    		<button class="popup" type="button">popup</button>
 				    	</td>
 				    </tr>
 			    </table>
@@ -58,11 +61,15 @@
 	     });
 	  }
 	};
-	$(document).ready(function(){
-		$("#container").animate({margin: "10px auto"}, 300, function(){
-			console.log("Fadein Finished");
-		$("#container").fadeIn(300);
-		});
+	$(".popup").click(function(e){
+		$("#overlay").fadeIn(300);
+		$(".previews").delay(200).fadeIn(300);
+		e.preventDefault();
+		return false;
+	});
+	$("#overlay").click(function(){
+		$(".previews").fadeOut(300);
+		$(this).delay(200).fadeOut(300);
 	});
 </script>
 </body>

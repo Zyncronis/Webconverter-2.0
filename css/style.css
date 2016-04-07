@@ -11,15 +11,15 @@ body{
 #container{
 	width:90%;
 	max-width:700px;
-	margin:0 auto;
+	margin:20px auto;
 	padding:20px;
-	display:none;
 }
 #overlay{
 	position:fixed;
 	z-index:0;
 	top:0;left:0;right:0;bottom:0;
 	background:rgba(0, 0, 0, 0.5);
+	cursor:pointer;
 }
 #overlay, .previews{
 	display:none;
@@ -62,9 +62,14 @@ main{
 	min-height:200px;
 	left:50%;
 	margin-left:-350px; /* Half of width */
-	top:35px;
+	top:45px;
 	background:#eee;
 	padding:20px;
 	box-shadow:inset 0px 0px 5px #ddd;
 }
 /* Animations */
+
+/* Collectives */
+.previews, main, header{
+	border-radius:3px;
+}
