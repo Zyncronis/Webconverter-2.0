@@ -1,16 +1,47 @@
+/* Document */
 *{box-sizing:border-box;}
 body, html{padding:0;margin:0;}
 body{
-	font-family:Sans-Serif;
+	font-family:Helvetica, Sans-Serif;
+	text-shadow:0px 1px 1px #fff;
 	font-size:13px;
 	color:#333;
-	background:#e1e1e1;
+	background:#f9f9f9;
 }
 #container{
 	width:90%;
 	max-width:700px;
 	margin:10px auto;
-	border-left:1px solid #aaa;
-	border-right:1px solid #aaa;
 	padding:20px;
 }
+/* Header */
+header{
+	position:relative;
+}
+header h1{
+	margin:5px 0;
+	background:#eee;
+	box-shadow:inset 0px 0px 5px #ddd;
+	padding:5px;
+	font-size:24px;
+}
+header span{
+	position:absolute;
+	top:12px;
+	right:10px;
+	font-weight:bold;
+	color:#666;
+}
+/* Main */
+main{
+
+}
+/* Dropzone */
+.dz-message span{
+	/* Text inside Dropzone */
+	font-weight:bold;
+	font-size:32px;
+	color:#999;
+}
+
+/* Animations */

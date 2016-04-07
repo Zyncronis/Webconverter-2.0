@@ -3,12 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Web Converter</title>
+	<link rel="stylesheet" href="css/dropzone.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<div id="container">
-
+		<header>
+			<h1>webconverter</h1>
+			<span>convert image files & metadata</span>
+		</header>
+		<main>
+			<form action="/file-upload" class="dropzone dz-clickable">
+			  <div class="fallback">
+			    <input name="file" type="file" accept="image/*" />
+			  </div>
+			</form>
+		</main>
 	</div>
-	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script><!-- require jQuery -->
+	<script src="js/dropzone.js"></script> <!-- require dropzone -->
 </body>
 </html>
