@@ -22,8 +22,62 @@
 			</div>
 				<div class="previews">
 				<!-- Previews kommer her -->
+					<div class="pre-img">
+						<!-- <img src="#" alt="#" /> -->
+						<img src="http://s5.favim.com/orig/52/winter-nature-small-canon-eos-7d-Favim.com-474348.jpg" alt="Demo img" /> 
+					</div>
+					<div class="pre-cont">
+						<table>
+							<tr>
+								<th colspan="2">Settings (<span class="filename"></span>)</th>
+							</tr>
+							<tr>
+								<td>Convert from</td>
+								<td>
+									<select>
+										<option>png</option>
+										<option>jpg</option>
+										<option>gif</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Convert to</td>
+								<td>
+									<select>
+										<option>png</option>
+										<option>jpg</option>
+										<option>gif</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Dimensions</td>
+								<td>
+									<input type="text" class="wideinp" value="640" />px <strong>x</strong>
+									<input type="text" class="tallinp" value="200" />px
+								</td>
+							</tr>
+							<tr>
+								<td class="alignright"><input type="checkbox" value="Delete metadata" /></td>
+								<td>Delete metadata (<a href="#" class="metad" title="Clicking this won't leave the page">?</a>)</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><button type="submit">Convert</button>
+							</tr>
+							<tr class="aboutmeta">
+							<td></td>
+							<td>
+							Metadata is information like what type of camera took the picture or when it was taken/made. 
+							</td>
+							</tr>
+						</table>
+					</div>
+					<div class="clear"></div>
 				</div>
-			<hr />
+				
+				<div class="dropzonepreview" style="display:none;"></div>
 			<form action="fileupload.php" method="post" class="temp-form">
 			    <table>
 				    <tr>
@@ -61,6 +115,28 @@
 	     });
 	  }
 	};
+	$(".popup").click(function(e){
+	  $("#overlay").fadeIn(300);
+	  $(".previews").delay(200).fadeIn(300);
+	  e.preventDefault();
+	  return false;
+	});
+	$("#overlay").click(function(){
+	  $(".previews").fadeOut(300);
+	  $(this).delay(200).fadeOut(300);
+	});
+	$(".metad").click(function(){
+		$(".aboutmeta").toggle();
+		return false;
+	});
+	$(function() {
+     $("input:file").change(function (){
+       var fileName = $(this).val();
+		$("#overlay").fadeIn(300);
+		$(".previews").delay(200).fadeIn(300);
+		$(".filename").html(fileName);
+     });
+  });
 </script>
 </body>
 </html>

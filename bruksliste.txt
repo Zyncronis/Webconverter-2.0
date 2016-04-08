@@ -1,1 +1,2 @@
 Dropzone.js	|	http://www.dropzonejs.com/	|	Brukt for drag&drog fil-upload
+Node.js		|	http://www.notejs.org		|	asdasdas

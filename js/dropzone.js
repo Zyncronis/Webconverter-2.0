@@ -135,7 +135,7 @@
       autoProcessQueue: true,
       autoQueue: true,
       addRemoveLinks: false,
-      previewsContainer: ".previews",
+      previewsContainer: ".dropzonepreview",
       hiddenInputContainer: "body",
       capture: null,
       renameFilename: null,

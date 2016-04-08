@@ -15,15 +15,21 @@ body{
 	padding:20px;
 }
 #overlay{
+	transition:all 0.2s ease-in-out;
 	position:fixed;
 	z-index:0;
 	top:0;left:0;right:0;bottom:0;
 	background:rgba(0, 0, 0, 0.5);
 	cursor:pointer;
 }
+#overlay:hover{
+	background:rgba(0, 0, 0, 0.44);
+	box-shadow:inset 0px 0px 50px #555;
+}
 #overlay, .previews{
 	display:none;
 }
+.clear{clear:both;}
 /* Header */
 header{
 	position:relative;
@@ -41,6 +47,17 @@ header h1{
 	background:url('../img/webconverter.png') no-repeat top left;
 	background-position:5px 3px;
 	background-color:#eee;
+	position:relative;
+}
+header h1:after{
+	content:"|";
+	font-size:25px;
+	position:absolute;
+	left:213px;
+	bottom:8px;
+	color:#aaa;
+	font-weight:200;
+	animation: writeLine 2s infinite;
 }
 header span{
 	position:absolute;
@@ -58,9 +75,8 @@ main{
 	/* Text inside Dropzone */
 	font-weight:bold;
 	font-size:24px;
-	color:#999;
-	text-shadow:0px 0px 50px #ddd;
-	text-shadow:0px 1px 1px #fff;
+	color:#fff;
+	text-shadow:none !important;
 }
 .previews{
 	position:fixed;
@@ -74,9 +90,92 @@ main{
 	padding:20px;
 	box-shadow:inset 0px 0px 5px #ddd;
 }
+.pre-img{
+	float:left;
+	width:30%;
+	background:#aaa;
+	box-shadow:inset 0px 0px 10px #888;
+	overflow:hidden;
+	height:200px;
+}
+.pre-img img{
+	max-height:100%;
+	min-width:100%;
+}
+.pre-cont{
+	float:right;
+	width:68%;
+}
+.pre-cont table{
+	width:100%;
+}
+.pre-cont table th{
+	text-align:left;
+	font-size:14px;
+}
+.pre-cont table tr td select{
+	width:100%;
+}
+.pre-cont, .pre-img{
+	min-height:200px;
+}
+.wideinp, .tallinp{
+	width:30px;
+	text-align:right;
+	background:none;
+	border:none;
+	border-bottom:1px dashed #aaa;
+	outline:none;
+}
+.metad{
+	color:#6495ca;
+}
+.aboutmeta{
+	display:none;
+	text-align:right;
+	color:#666;
+}
+.pre-cont table tr td:nth-child(even){
+	width:270px;
+}
+/*a.metad:hover + .aboutmeta{
+	display:table-row;
+}*/
 /* Animations */
-
+@keyframes animatedBackground {
+	0% { background-position: 5px 3px; }
+	100% { background-position: -255px 3px; }
+}
+@keyframes writeLine {
+	0% { color:#111; }
+	49% { color:#111; }
+	50% { color: #eee; }
+	99% { color: #eee; }
+	100% { color:#111; }
+}
 /* Collectives */
 .previews, main, header{
 	border-radius:3px;
+}
+.alignright{
+	text-align:right;
+}
+button{
+	border:1px solid #46688D;
+	border-top-color:#3F5D7E;
+	border-right-color:#3F5D7E;
+	background:#6495ca;
+	padding:3px 10px;
+	cursor:pointer;
+	border-radius:2px;
+	box-shadow:inset 0px 0px 2px #92b4d9;
+	font-weight:bold;
+	color:#f1f1f1;
+}
+button:hover{
+	border:1px solid #3F5D7E;
+	border-top-color:#46688D;
+	border-right-color:#46688D;
+	box-shadow:inset 0px 0px 5px #83AAD4;
+	color:#fff;
 }
