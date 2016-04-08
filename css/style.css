@@ -29,11 +29,18 @@ header{
 	position:relative;
 }
 header h1{
-	margin:5px 0;
+	/* #TB
+	font-size:24px;
 	background:#eee;
+	*/
+	margin:5px 0;
 	box-shadow:inset 0px 0px 5px #ddd;
 	padding:5px;
-	font-size:24px;
+	font-size:0px;
+	height:40px;
+	background:url('../img/webconverter.png') no-repeat top left;
+	background-position:5px 3px;
+	background-color:#eee;
 }
 header span{
 	position:absolute;
