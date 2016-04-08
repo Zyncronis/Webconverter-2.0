@@ -17,3 +17,13 @@ function handleFileSelect(evt) {
 }
 
 document.getElementById('files').addEventListener('change', handleFileSelect, false);
+$(".popup").click(function(e){
+  $("#overlay").fadeIn(300);
+  $(".previews").delay(200).fadeIn(300);
+  e.preventDefault();
+  return false;
+});
+$("#overlay").click(function(){
+  $(".previews").fadeOut(300);
+  $(this).delay(200).fadeOut(300);
+});
