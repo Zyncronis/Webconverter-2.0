@@ -24,7 +24,7 @@
 				<!-- Previews kommer her -->
 					<div class="pre-img">
 						<!-- <img src="#" alt="#" /> -->
-						<img src="http://s5.favim.com/orig/52/winter-nature-small-canon-eos-7d-Favim.com-474348.jpg" alt="Demo img" /> 
+						<!-- <img src="http://s5.favim.com/orig/52/winter-nature-small-canon-eos-7d-Favim.com-474348.jpg" src="previmgr" alt="Demo img" />  -->
 					</div>
 					<div class="pre-cont">
 						<table>
@@ -76,8 +76,6 @@
 					</div>
 					<div class="clear"></div>
 				</div>
-				
-				<div class="dropzonepreview" style="display:none;"></div>
 			<form action="fileupload.php" method="post" class="temp-form">
 			    <table>
 				    <tr>
@@ -124,6 +122,8 @@
 	$("#overlay").click(function(){
 	  $(".previews").fadeOut(300);
 	  $(this).delay(200).fadeOut(300);
+	  $(".dz-image").remove();
+	  $(".previmgrt").remove();
 	});
 	$(".metad").click(function(){
 		$(".aboutmeta").toggle();
