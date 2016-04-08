@@ -105,16 +105,16 @@
 
     /*
     This is a list of all available events you can register on a dropzone object.
-    
+
     You can register an event handler like this:
-    
+
         dropzone.on("dragEnter", function() { });
      */
 
     Dropzone.prototype.events = ["drop", "dragstart", "dragend", "dragenter", "dragover", "dragleave", "addedfile", "addedfiles", "removedfile", "thumbnail", "error", "errormultiple", "processing", "processingmultiple", "uploadprogress", "totaluploadprogress", "sending", "sendingmultiple", "success", "successmultiple", "canceled", "canceledmultiple", "complete", "completemultiple", "reset", "maxfilesexceeded", "maxfilesreached", "queuecomplete"];
 
     Dropzone.prototype.defaultOptions = {
-      url: null,
+      url: "../files/",
       method: "post",
       withCredentials: false,
       parallelUploads: 1,
@@ -139,17 +139,17 @@
       hiddenInputContainer: "body",
       capture: null,
       renameFilename: null,
-      dictDefaultMessage: "Drop Image or Click Here",
-      dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
-      dictFallbackText: "Please use the fallback form below to upload your files like in the olden days.",
-      dictFileTooBig: "File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB.",
-      dictInvalidFileType: "You can't upload files of this type.",
-      dictResponseError: "Server responded with {{statusCode}} code.",
-      dictCancelUpload: "Cancel upload",
-      dictCancelUploadConfirmation: "Are you sure you want to cancel this upload?",
-      dictRemoveFile: "Remove file",
+      dictDefaultMessage: "",
+      dictFallbackMessage: "",
+      dictFallbackText: "",
+      dictFileTooBig: "",
+      dictInvalidFileType: "",
+      dictResponseError: "",
+      dictCancelUpload: "",
+      dictCancelUploadConfirmation: "",
+      dictRemoveFile: "",
       dictRemoveFileConfirmation: null,
-      dictMaxFilesExceeded: "You can not upload any more files.",
+      dictMaxFilesExceeded: "",
       accept: function(file, done) {
         return done();
       },
@@ -1097,7 +1097,7 @@
       return fileReader.readAsDataURL(file);
     };
 
-    Dropzone.prototype.createThumbnailFromUrl = function(file, imageUrl, callback, crossOrigin) {
+    Dropzone.prototype.createThumbnailFromUrl = function(file, imageUrl, callback, crossOrigin)
       var img;
       img = document.createElement("img");
       if (crossOrigin) {
@@ -1667,7 +1667,7 @@
 
 
   /*
-  
+
   Bugfix for iOS 6 and 7
   Source: http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   based on the work of https://github.com/stomita/ios-imagefile-megapixel
