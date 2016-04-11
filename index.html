@@ -85,7 +85,7 @@
 				    </tr>
 				    <tr>
 				    	<td>
-				    		<button type="submit">upload</button>
+				    		<button type="submit" id="andreasbutton">upload</button>
 				    	</td>
 				    	<td>
 				    		<button class="popup" type="button">popup</button>
@@ -137,6 +137,10 @@
 		$(".filename").html(fileName);
      });
   });
+	     $(document).keyup(function(e) {
+	  if (e.keyCode === 13) $('#andreasbutton').click();     // enter
+	  if (e.keyCode === 27) $('#overlay').click();   // esc
+	});
 </script>
 </body>
 </html>

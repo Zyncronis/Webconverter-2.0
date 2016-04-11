@@ -611,9 +611,9 @@ previewTemplate: "<div class=\"dz-preview dz-file-preview\">\n  <div class=\"dz-
             $(".previews").delay(200).fadeIn(300);
             var daimgurl = $(".dz-image img").attr("src");
             console.log($(".dz-image img").attr("src"));
-            var img = $('<img class="previmgrt" src="' + daimgurl + '" alt="Preview Image" />'); //Equivalent: $(document.createElement('img'))
+            /*var img = $('<img class="previmgrt" src="' + daimgurl + '" alt="Preview Image" />'); //Equivalent: $(document.createElement('img'))
             img.attr('src', daimgurl);
-            img.appendTo('.pre-img');
+            img.appendTo('.pre-img');*/
       });
       this.on("complete", (function(_this) {
         return function(file) {
