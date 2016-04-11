@@ -1,4 +1,4 @@
 <?php
-    echo =("i live");
+    echo "i live";
    
 ?>
