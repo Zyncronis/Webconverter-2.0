@@ -1,5 +1,5 @@
 <?php
-    echo "i fck ur mum";
+    
     $target_dir ="uploads/"
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
@@ -18,12 +18,3 @@
     } 
    
 ?>
-<html>
-<head>
-
-</head>
-<body>
-  <h1>test</h1>
-</body>
-
-</html>
